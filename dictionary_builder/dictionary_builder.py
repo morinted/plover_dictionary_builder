@@ -215,6 +215,7 @@ class DictionaryBuilder(Tool, Ui_DictionaryBuilder):
 
     def focus_strokes(self):
         self.add_translation.strokes.setFocus()
+        self.add_translation._focus_strokes()
 
     def on_add_and_next(self):
         self.on_add()
