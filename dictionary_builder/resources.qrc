@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/fancy_tape">
+        <file>books.svg</file>
+    </qresource>
+</RCC>
