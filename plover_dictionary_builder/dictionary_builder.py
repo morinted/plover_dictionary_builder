@@ -9,7 +9,8 @@ from PyQt5.QtWidgets import (
 
 from plover.gui_qt.add_translation_widget import AddTranslationWidget
 from plover.gui_qt.tool import Tool
-from dictionary_builder.dictionary_builder_ui import Ui_DictionaryBuilder
+
+from plover_dictionary_builder.dictionary_builder_ui import Ui_DictionaryBuilder
 
 SORT_FREQUENCY, SORT_APPEARANCE, SORT_ALPHABETICAL = range(3)
 
