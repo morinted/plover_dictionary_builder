@@ -1,0 +1,5 @@
+# UI.
+exclude plover_dictionary_builder/*_rc.py
+exclude plover_dictionary_builder/*_ui.py
+include plover_dictionary_builder/*.ui
+recursive-include plover_dictionary_builder/resources *
