@@ -88,7 +88,7 @@ margin: -6;
         <number>0</number>
        </property>
        <item row="2" column="0">
-        <widget class="QWidget" name="add_translation" native="true">
+        <widget class="AddTranslationWidget" name="add_translation" native="true">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
            <horstretch>0</horstretch>
@@ -164,6 +164,14 @@ margin: -6;
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>AddTranslationWidget</class>
+   <extends>QWidget</extends>
+   <header>plover.gui_qt.add_translation_widget</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>text_box</tabstop>
   <tabstop>check_include_words</tabstop>

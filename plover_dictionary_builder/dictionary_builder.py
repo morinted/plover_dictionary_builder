@@ -7,7 +7,6 @@ from PyQt5.QtGui import QKeySequence
 from PyQt5.QtWidgets import (
     QPushButton, QDialogButtonBox, QAbstractItemView, QMessageBox)
 
-from plover.gui_qt.add_translation_widget import AddTranslationWidget
 from plover.gui_qt.tool import Tool
 
 from plover_dictionary_builder.dictionary_builder_ui import Ui_DictionaryBuilder
@@ -39,10 +38,6 @@ class DictionaryBuilder(Tool, Ui_DictionaryBuilder):
         self.builder = None
 
         self._word_lists = None
-
-        add_translation = AddTranslationWidget(self._engine)
-        self.glayout.replaceWidget(self.add_translation, add_translation)
-        self.add_translation = add_translation
 
         self.order_combo.currentIndexChanged.connect(self.set_sort_order)
         self.word_list_widget.currentItemChanged.connect(self.word_list_changed)
