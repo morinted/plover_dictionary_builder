@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/fancy_tape">
-        <file>books.svg</file>
+    <qresource prefix="/dictionary_builder">
+        <file>icon.svg</file>
     </qresource>
 </RCC>

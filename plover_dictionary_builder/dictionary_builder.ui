@@ -169,7 +169,9 @@ margin: -6;
   <tabstop>check_include_words</tabstop>
   <tabstop>order_combo</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="resources/resources.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>button_box</sender>
