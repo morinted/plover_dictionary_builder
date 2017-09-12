@@ -22,7 +22,7 @@ class OrderedCounter(Counter, OrderedDict):
 class DictionaryBuilder(Tool, Ui_DictionaryBuilder):
 
     TITLE = 'Dictionary Builder'
-    ICON = ':/books.svg'
+    ICON = ':/dictionary_builder/icon.svg'
     ROLE = 'builder'
     SHORTCUT = 'Ctrl+B'
 
