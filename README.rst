@@ -1,16 +1,16 @@
-====================
+=========================
 Plover Dictionary Builder
-====================
+=========================
 Add new vocabulary to your dictionaries faster than ever before
--------------------------------------------------
+----------------------------------------------------------------
 
 .. image:: screenshots/builder.png
 
 How to Use
----------
+----------
 
 Part 1: Selecting Text
-=================
+======================
 
 #. Get a word list or article to scan for vocabulary.
 #. Paste your text into the dictionary builder.
@@ -18,7 +18,7 @@ Part 1: Selecting Text
 #. Click "Start Building".
 
 Part 2: Building
-============
+================
 
 See the various parts of the builder:
 
@@ -74,6 +74,6 @@ See the various parts of the builder:
 All changes you make in the dictionary builder are saved automatically as you go.
 
 License
-======
+=======
 
 This plugin is licensed under GPLv2, or any later version.
