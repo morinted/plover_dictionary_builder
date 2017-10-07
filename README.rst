@@ -4,7 +4,7 @@ Plover Dictionary Builder
 Add new vocabulary to your dictionaries faster than ever before
 ----------------------------------------------------------------
 
-.. image:: screenshots/builder.png
+.. image:: https://i.imgur.com/f48fKwv.png
 
 How to Use
 ----------
@@ -22,7 +22,7 @@ Part 2: Building
 
 See the various parts of the builder:
 
-.. image:: screenshots/builder_annotated.png
+.. image:: https://i.imgur.com/egW4Ps3.png
 
 1. Progress indicator
 2. Entry definer:
