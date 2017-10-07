@@ -196,11 +196,13 @@ class DictionaryBuilder(Tool, Ui_DictionaryBuilder):
         if addition:
             # For the operation we save the translation change
             # and the builder's word for restoring the state.
-            self._operations.append((addition,
-                                     self.word_list_widget.item(
-                                        self._current_word
-                                     ).text()
-                                     ))
+            self._operations.append(
+                (addition,
+                 self.word_list_widget.item(
+                    self._current_word
+                 ).text()
+                )
+            )
             self._undo_button.setEnabled(True)
         # Queue lookup of translation for newly saved entry
         self.add_translation.on_translation_edited()
@@ -221,11 +223,12 @@ class DictionaryBuilder(Tool, Ui_DictionaryBuilder):
         last_operation, word = self._operations.pop()
         if not self._operations:
             self._undo_button.setEnabled(False)
-        dictionary, strokes, translation_change = last_operation
-        # Get previous value (translation or None)
-        old_translation, new_translation = translation_change
-        self._engine.add_translation(strokes, old_translation,
-                                     dictionary=dictionary)
+        dictionary, strokes, old_translation, new_translation = last_operation
+        if old_translation is None:
+            self.delete_translation(strokes, dictionary)
+        else:
+            self._engine.add_translation(strokes, old_translation,
+                                         dictionary_path=dictionary.path)
         items = self.word_list_widget.findItems(word, Qt.MatchExactly)
         if items:
             item = items[0]
@@ -236,6 +239,12 @@ class DictionaryBuilder(Tool, Ui_DictionaryBuilder):
             self.add_translation.strokes.selectAll()
             self.add_translation.on_strokes_edited()
             self.add_translation.on_translation_edited()
+
+    def delete_translation(self, strokes, dictionary):
+        with self._engine:
+            if strokes in dictionary:
+                del dictionary[strokes]
+                self._engine._dictionaries.save(path_list=(dictionary.path,))
 
     def accept(self):
         if self.pages.currentIndex() == 0:
