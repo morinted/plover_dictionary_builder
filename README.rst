@@ -5,6 +5,7 @@ Add new vocabulary to your dictionaries faster than ever before
 ----------------------------------------------------------------
 
 .. image:: https://i.imgur.com/f48fKwv.png
+   :width: 400 px
 
 How to Use
 ----------
@@ -23,6 +24,7 @@ Part 2: Building
 See the various parts of the builder:
 
 .. image:: https://i.imgur.com/egW4Ps3.png
+   :width: 400 px
 
 1. Progress indicator
 2. Entry definer:
