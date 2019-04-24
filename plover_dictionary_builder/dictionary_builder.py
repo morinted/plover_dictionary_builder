@@ -140,14 +140,29 @@ class DictionaryBuilder(Tool, Ui_DictionaryBuilder):
 
     def make_word_list(self):
         user_text = self.text_box.toPlainText()
+
+        transformation = self.combo_text_transformation.currentText().lower()
+        if transformation == 'uppercase':
+            user_text = user_text.upper()
+        elif transformation == 'lowercase':
+            user_text = user_text.lower()
+
+        translations_by_line = self.check_line_translations.isChecked()
+
         # Need to match:
         #  - {#things}, {PLOVER:}, it's, with-hyphen, word. (not including .)
         #  - free2play, 4life
         # Need to avoid:
         #  - Pure numbers, e.g. 2, 1234
         #  - [2]
-        words = re.findall(r'([\w\-_\'’]*[^\d\s\W]+[\w\-_\'’]*|{[^\s]*})',
-                           user_text)
+        words = (
+            list(filter(None, user_text.split('\n')))
+            if translations_by_line else
+            re.findall(
+                r'([\w\-_\'’]*[^\d\s\W]+[\w\-_\'’]*|{[^\s]*})',
+                user_text
+            )
+        )
         if words:
             word_list = OrderedCounter(words)
             if not self.check_include_words.isChecked():
