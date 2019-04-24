@@ -7,6 +7,15 @@ Add new vocabulary to your dictionaries faster than ever before
 .. image:: https://i.imgur.com/f48fKwv.png
    :width: 400 px
 
+Release Notes
+-------------
+
+v0.1.0
+======
+
+- Add option to have a translation per line.
+- Add option to transform text to upper or lowercase.
+
 How to Use
 ----------
 
@@ -15,7 +24,12 @@ Part 1: Selecting Text
 
 #. Get a word list or article to scan for vocabulary.
 #. Paste your text into the dictionary builder.
-#. Select whether you'd like to see words that are already defined in your dictionary. If you only want to see new words, leave this unchecked.
+#. For building up with word lists or phrases, you can select
+   "Treat each line as one translation".
+#. Select whether you'd like to see words that are already defined
+   in your dictionary. If you only want to see new words, leave this unchecked.
+#. Apply a text transformation if you'd like to avoid being case-sensitive or
+   must work in all caps.
 #. Click "Start Building".
 
 Part 2: Building
